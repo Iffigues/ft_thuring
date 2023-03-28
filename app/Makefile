@@ -1,7 +1,7 @@
 # Makefile for myproject
 # Set the compiler and compiler flags
 GHC = ghc
-GHCFLAGS = -O2
+GHCFLAGS = -O2 -package aeson
 # Define the name of the executable
 TARGET = myprogram
 # Use a wildcard to find all .hs files in the directory
