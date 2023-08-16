@@ -1,11 +1,12 @@
 import System.Environment (getArgs)
+import Help
 
 maxNum :: [String] -> Maybe Int
 maxNum ("-h":_) = Nothing
 maxNum ("--help":_) = Nothing
 maxNum args = if null args
                   then Nothing
-                  else Just 3
+                  else Just (length args)
 
 main :: IO ()
 main = do
@@ -13,5 +14,6 @@ main = do
   args <- getArgs
   case maxNum args of
     Nothing -> help
-    Just n -> putStrLn $ "The maximum number is: " ++ show n
-  putStrLn $ "Command line arguments: " ++ show args ++ abc
+    Just n  -> if n == 2
+                  then putStrLn "The maximum number is 0"
+                  else help  

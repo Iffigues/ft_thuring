@@ -1,3 +1,5 @@
+module Help (help) where
+
 help :: IO ()
 help = do
   let helper = "usage: ft_turing [-h] jsonfile input\n\n "++
