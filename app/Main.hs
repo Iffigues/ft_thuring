@@ -10,10 +10,9 @@ maxNum args = if null args
 
 main :: IO ()
 main = do
-  let abc = "my string"
   args <- getArgs
   case maxNum args of
     Nothing -> help
     Just n  -> if n == 2
-                  then putStrLn "The maximum number is 0"
+                  then putStrLn "The maximum number is s"
                   else help  
